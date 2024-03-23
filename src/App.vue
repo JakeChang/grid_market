@@ -1,26 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="w-full h-screen grid grid-cols-3">
+        <TradingView container="container1" symbol="COINBASE:BTCUSD"></TradingView>
+        <TradingView container="container2" symbol="COINBASE:ETHUSD"></TradingView>
+        <TradingView container="container3" symbol="COINBASE:ADAUSD"></TradingView>
+        <TradingView container="container4" symbol="COINBASE:MATICUSD"></TradingView>
+        <TradingView container="container5" symbol="COINBASE:LINKUSD"></TradingView>
+        <TradingView container="container6" symbol="COINBASE:GMTUSD"></TradingView>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import { onMounted } from 'vue';
+import TradingView from './components/TradingView.vue';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    name: 'App',
+    components: {
+        TradingView,
+    },
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
